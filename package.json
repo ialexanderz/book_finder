@@ -1,0 +1,30 @@
+{
+  "name": "unit_project",
+  "version": "1.0.0",
+  "description": "## **Description** This is a book review app. User's can search for books, write reviews, and leave comments on other's reviews.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianalexanderz/book_finder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ianalexanderz/book_finder/issues"
+  },
+  "homepage": "https://github.com/ianalexanderz/book_finder#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "crypto-js": "^4.0.0",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "morgan": "^1.10.0",
+    "pg": "^8.5.1",
+    "rowdy-logger": "^1.0.2",
+    "sequelize": "^6.5.0"
+  }
+}

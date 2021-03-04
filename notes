@@ -1,0 +1,7 @@
+Setting up repo:
+- git init
+- new repo
+- git remote add origin git@git.....
+
+Setting up packages
+- npm init
