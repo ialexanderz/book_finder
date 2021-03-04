@@ -1,7 +1,17 @@
-Setting up repo:
+Set up
+======================
+Repo:
 - git init
 - new repo
 - git remote add origin git@git.....
 
-Setting up packages
-- npm init
+npm init ---> Packages:
+- sequelize       - nodemon                    - axios        - ejs?
+- postgres        - express-ejs-layouts        - morgan
+- express         - rowdy-logger               - crypto-js
+
+Models:
+- sequelize init
+- sequelize db:create
+- sequelize model:generate
+- sequelize db:migrate
