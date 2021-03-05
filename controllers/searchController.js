@@ -12,10 +12,12 @@ router.get('/', async (req, res) => {
   }
 })
 //  GET /results - render results of omdb search
-router.get('/results', async (req, res) => {
+router.post('/results', async (req, res) => {
+  console.log('hello')
   try{
-    const results = await axios.get('https://www.googleapis.com/books/v1/volumes?q=Our Mathematical Universe')
-    res.render('results', { books: results.data.Search })
+    const results = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${req.query.search}&maxResults=5`)
+    // res.render('results', { books: results.data.search })
+    console.log(results.data.items[0])
   } catch (error) {
     console.log(error)
     res.status(500).render('error.ejs')
