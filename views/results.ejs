@@ -1,5 +1,5 @@
-<h1>🎬 I found some movies! 🎬</h1>
-<% books.forEach(movie => { %>
-  <h3><%=  %></h3>
+<h1>Found some books</h1>
+  <h3>Title: <%= books.items[0].volumeInfo.title %></h3>
+  <h3>Published: <%= books.items[0].volumeInfo.publishedDate %></h3>
+  <h3>Authors: <%= books.items[0].volumeInfo.authors %></h3>
 
-<% }) %>
