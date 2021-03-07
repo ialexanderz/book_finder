@@ -15,9 +15,11 @@ router.get('/', async (req, res) => {
 router.post('/results', async (req, res) => {
   console.log('hello')
   try{
-    const results = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${req.query.search}&maxResults=5`)
-    res.render('results', { books: results.data })
-    console.log(results.data.items[0].volumeInfo.authors)
+    const results = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${req.body.search}&maxResults=5`)
+    console.log(results.data.items)
+    res.render('results', { books: results.data.items })
+    // console.log(results.data)
+    // console.log(req)
   } catch (error) {
     console.log(error)
     res.status(500).render('error.ejs')

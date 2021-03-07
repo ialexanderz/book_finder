@@ -1,5 +1,19 @@
 <h1>Found some books</h1>
-  <h3>Title: <%= books.items[0].volumeInfo.title %></h3>
-  <h3>Published: <%= books.items[0].volumeInfo.publishedDate %></h3>
-  <h3>Authors: <%= books.items[0].volumeInfo.authors %></h3>
 
+<% books.map(book => { %>
+ 
+  <h3>Title: <%= book.volumeInfo.title %></h3> 
+  <form method="POST" action="/review/new">
+  <label for="content">Review</label>
+  <input id="content" type="text" name="content">
+  <label for="rating">Rating</label>
+  <input for="rating" type="text" name="rating">
+  <input type="submit">
+</form>
+  <% }) %>
+   
+
+
+
+
+ 

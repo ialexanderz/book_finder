@@ -55,6 +55,7 @@ app.get('/', (req, res) => {
 /* Controllers */
 app.use('/auth', require('./controllers/authController'))
 app.use('/search', require('./controllers/searchController'))
+app.use('/review', require('./controllers/usersBooksController'))
 
 
 app.listen(PORT, () => {
