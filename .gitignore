@@ -1,5 +1,4 @@
 node_modules
 notes
 .DS_Store
-config
-.dotenv
+.env
