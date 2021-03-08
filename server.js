@@ -26,19 +26,19 @@ app.use(cookieParser())
 // Adds the user to res.locals.user if there's a cookie
 app.use(async (req, res, next) => {
   if (req.cookies.userId) {
-      const decryptedId = cryptoJS.AES.decrypt(req.cookies.userId, process.env.COOKIE_SECRET).toString(cryptoJS.enc.Utf8)
-      
-      // console.log(decryptedId);
-      // await db.user.findByPk(decryptedId)
-      const user = await db.user.findOne({
-          where: {
-              id: decryptedId
-          }
-      })
-      
-      res.locals.user = user
+    const decryptedId = cryptoJS.AES.decrypt(req.cookies.userId, process.env.COOKIE_SECRET).toString(cryptoJS.enc.Utf8)
+    
+    // console.log(decryptedId);
+    // await db.user.findByPk(decryptedId)
+    const user = await db.user.findOne({
+      where: {
+        id: decryptedId
+      }
+    })
+    
+    res.locals.user = user
   } else {
-      res.locals.user = null
+    res.locals.user = null
   }
   
   next()
