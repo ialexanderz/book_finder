@@ -1,0 +1,34 @@
+
+body {
+    margin: 0;
+}
+
+h1 {
+    display: flex;
+    justify-content: space-around;
+}
+
+img {
+    width: 200px;
+}
+
+div {
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: rebeccapurple;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+
+nav a:hover {
+    color: coral;
+}

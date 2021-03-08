@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
     console.log(error)
   }
 })
-//  GET /results - render results of book search
+//  POST /results - render results of book search
 router.post('/results', async (req, res) => {
   console.log('hello')
   try{

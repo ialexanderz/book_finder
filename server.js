@@ -46,7 +46,7 @@ app.use(async (req, res, next) => {
 
 
 
-/* routes */
+/* routes */ /*  render the homepage */
 app.get('/', (req, res) => {
   res.render('index')
 })
