@@ -3,13 +3,15 @@ const db = require('../models')
 const axios = require('axios')
 
 
-router.get('/', (req, res) => {
-  res.render('review')
-})
+// router.get('/', (req, res) => {
+//   console.log('hello')
+//   res.render('review')
+// })
 
 router.post('/', async (req, res) => {
   try {
-    res.render('/review')
+    console.log('hello again')
+    res.render('review')
   } catch (error) {
     console.log(error)
   }

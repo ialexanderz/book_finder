@@ -16,7 +16,7 @@ router.post('/results', async (req, res) => {
   console.log('hello')
   try{
     const results = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${req.body.search}&maxResults=5`)
-    console.log(results.data.items)
+    // console.log(results.data.items)
     res.render('results', { books: results.data.items })
     // console.log(results.data)
     // console.log(req)
@@ -25,6 +25,7 @@ router.post('/results', async (req, res) => {
     res.status(500).render('error.ejs')
   }
 })
+
 
 //  GET /detail/:movie_id - render detail of one movie omdb search
 // router.get('/dontgohere', async (req, res) => {

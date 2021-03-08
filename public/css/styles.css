@@ -6,6 +6,7 @@ body {
 h1 {
     display: flex;
     justify-content: space-around;
+    font-size: 300%;
 }
 
 img {
@@ -19,16 +20,19 @@ div {
 nav {
     display: flex;
     justify-content: space-between;
-    background-color: rebeccapurple;
+    background-color: rgb(142, 204, 240);
     padding: 10px;
+    border: black solid 3px;
+    height: 30px;
 }
 
 nav a {
-    color: white;
+    color: black;
     text-decoration: none;
     padding: 5px;
+    font-size: 22px;
 }
 
 nav a:hover {
-    color: coral;
+    color: red;
 }
