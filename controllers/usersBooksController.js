@@ -17,59 +17,46 @@ router.post('/', async (req, res) => {
   }
 })
 
-// router.get('/new', async (req, res) => {
+
+router.post('/new', async (req, res) => {
+  try {
+
+    const newBook = await db.users_books.create({
+      userId: req.body.userId,
+      content: req.body.content,
+      rating: req.body.rating
+    })
+    res.render('new')
+  } catch(error) {
+    console.log(error)
+    res.status(400).json({ message: 'bad request' })
+  }
+})
+
+// //  GET /detail/:movie_id - render detail of one movie omdb search
+// router.get('/review', async (req, res) => {
 //   try {
-//     res.render('review')
+//     const results = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${req.body}`)
+//     res.render('result', {book: results.data })
 //   } catch (error) {
 //     console.log(error)
+//     res.status(500).render('error.ejs')
 //   }
 // })
 
 // router.post('/new', async (req, res) => {
+//   try {
 
-  // try {
-  //    const [newPokemon, created] = await db.pokemon.findOrCreate({
-  //           where: { 
-  //               name: req.body.name 
-  //           }
-  //       })
-  //       // console.log(created);
-  //       res.locals.user.addPokemon(newPokemon);
-  //       res.redirect(`/pokemons`)
-    
-  //   //  const created = await db.users_books.findOrCreate({
-  //   //        where: {
-  //   //             // userId: req.body.userId
-  //   //             // bookId: req.body.bookId
-  //   //             content: req.body.content
-  //   //             rating: req.body.rating
-
-
-  //   //        }
-
-  //   //     })
-        
-  //       // console.log(created);
-    
-
-  // } catch (error) {
-
-  // }
+//     const newBook = await db.book.create({
+//       googleBookId: req.body.googleBookId,
+//       title: req.body.title
+//     })
+//     res.render('new')
+//   } catch(error) {
+//     console.log(error)
+//     res.status(400).json({ message: 'bad request' })
+//   }
 // })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+     
 
 module.exports = router
